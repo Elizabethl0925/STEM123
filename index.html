@@ -2,85 +2,170 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Taekwondo Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            background-color: #f4f4f4;
+            color: #333;
         }
+
         header {
-            background: #333;
+            background: #111;
             color: white;
-            padding: 15px;
             text-align: center;
+            padding: 40px 20px;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
         nav {
+            background: #c40000;
             display: flex;
             justify-content: center;
-            background: #444;
+            padding: 10px;
         }
+
         nav a {
             color: white;
-            padding: 10px 15px;
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
         }
+
         nav a:hover {
-            background: #555;
+            text-decoration: underline;
         }
-        .gallery-container {
-            max-width: 900px;
-            margin: 20px auto;
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #c40000;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
         }
-        .gallery-container img {
+
+        .gallery img {
             width: 100%;
-            height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
+
         footer {
-            text-align: center;
-            padding: 12px;
-            background: #333;
+            background: #111;
             color: white;
-            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            background: #c40000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #900000;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Gallery</h1>
+    <h1>Taekwondo</h1>
+    <p>The Korean Martial Art of Discipline and Power</p>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="projects.html">Projects</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="#about">About</a>
+    <a href="#belts">Belt System</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<div class="gallery-container">
-    <!-- Replace these src="imageX.jpg" with your real image files -->
-    <img src="image1.jpg" alt="Gallery Image">
-    <img src="image2.jpg" alt="Gallery Image">
-    <img src="image3.jpg" alt="Gallery Image">
-    <img src="image4.jpg" alt="Gallery Image">
-    <img src="image5.jpg" alt="Gallery Image">
-    <img src="image6.jpg" alt="Gallery Image">
-    <img src="image7.jpg" alt="Gallery Image">
-    <img src="image8.jpg" alt="Gallery Image">
-    <img src="image9.jpg" alt="Gallery Image">
-</div>
+<section id="about">
+    <h2>About Taekwondo</h2>
+    <div class="card">
+        <p>
+            Taekwondo is a Korean martial art that focuses on high kicks, fast strikes,
+            and strong discipline. It combines combat techniques, self-defense,
+            sport, exercise, and philosophy.
+        </p>
+    </div>
+</section>
+
+<section id="belts">
+    <h2>Belt System</h2>
+    <div class="card">
+        <ul>
+            <li>White Belt – Beginner</li>
+            <li>Yellow Belt – Basic Techniques</li>
+            <li>Green Belt – Developing Skills</li>
+            <li>Blue Belt – Advanced Techniques</li>
+            <li>Red Belt – High Level</li>
+            <li>Black Belt – Expert</li>
+        </ul>
+    </div>
+</section>
+
+<section id="benefits">
+    <h2>Benefits of Taekwondo</h2>
+    <div class="card">
+        <ul>
+            <li>Improves physical fitness</li>
+            <li>Builds confidence</li>
+            <li>Enhances discipline and respect</li>
+            <li>Teaches self-defense</li>
+            <li>Develops mental focus</li>
+        </ul>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="image1.jpg" alt="Taekwondo Training">
+        <img src="image2.jpg" alt="Taekwondo Kick">
+        <img src="image3.jpg" alt="Taekwondo Competition">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="card">
+        <p>Email: info@taekwondoclub.com</p>
+        <p>Phone: +1 234 567 890</p>
+        <button>Join Now</button>
+    </div>
+</section>
 
 <footer>
-    &copy; 2026 Your Name or Website Title
+    &copy; 2026 Taekwondo Club | All Rights Reserved
 </footer>
 
 </body>
